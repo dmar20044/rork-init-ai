@@ -2,8 +2,8 @@ import { createClient } from '@supabase/supabase-js';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 // These will be set from environment variables
-const supabaseUrl = process.env.EXPO_PUBLIC_SUPABASE_URL;
-const supabaseAnonKey = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY;
+const supabaseUrl = process.env.EXPO_PUBLIC_SUPABASE_URL || 'https://djkastkpaaicewoicqxf.supabase.co';
+const supabaseAnonKey = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRqa2FzdGtwYWFpY2V3b2ljcXhmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTYxNjA2MDIsImV4cCI6MjA3MTczNjYwMn0.Oz0H947O7xCMUZN72T_rjKKHmBIADScV-ylFt4tr40M';
 
 // Validate required environment variables
 if (!supabaseUrl) {
